@@ -4,9 +4,6 @@ import {
   Code2,
   Database,
   Globe,
-  Smartphone,
-  GitFork,
-  GitBranch,
   Terminal,
 } from "lucide-react";
 

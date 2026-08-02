@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="flex min-h-screen items-center justify-center bg-slate-950 px-6 text-center">
       <div>
         <p className="mb-3 text-blue-400">
-          👋 Hello, I'm
+          👋 Hello, I&apos;m
         </p>
 
         <h1 className="mb-4 text-6xl font-extrabold text-white">
@@ -16,7 +16,7 @@ export default function Hero() {
 
         <p className="mx-auto max-w-2xl text-lg text-slate-400">
           Passionate about building modern web applications,
-          Mobile apps and solving Data Structures & Algorithms.
+          Mobile apps and solving Data Structures &amp; Algorithms.
         </p>
       </div>
     </section>

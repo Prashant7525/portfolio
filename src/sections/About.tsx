@@ -33,9 +33,9 @@ export default function About() {
           </h2>
 
           <p className="mb-6 text-lg leading-8 text-slate-300">
-            I'm a passionate Software Developer and Computer Science student
+            I&apos;m a passionate Software Developer and Computer Science student
             who enjoys building beautiful web applications, Android apps and
-            solving Data Structures & Algorithms.
+            solving Data Structures &amp; Algorithms.
           </p>
 
           <p className="mb-8 text-lg leading-8 text-slate-300">
@@ -81,9 +81,7 @@ export default function About() {
           </div>
 
           <div className="mt-10">
-            <Button
-              className="bg-cyan-500 hover:bg-cyan-600"
-            >
+            <Button className="bg-cyan-500 hover:bg-cyan-600">
               <a
                 href="/resume/Prashant_Resume.pdf"
                 download

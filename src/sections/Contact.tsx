@@ -15,13 +15,12 @@ export default function Contact() {
         </h2>
 
         <p className="mx-auto mb-16 max-w-2xl text-center text-slate-400">
-          Have a project or opportunity? Let's connect.
+          Have a project or opportunity? Let&apos;s connect.
         </p>
 
         <div className="grid gap-12 lg:grid-cols-2">
 
           {/* Left */}
-
           <div className="space-y-8">
 
             <div className="flex items-center gap-4">
@@ -57,7 +56,6 @@ export default function Contact() {
           </div>
 
           {/* Right */}
-
           <form className="space-y-6">
 
             <input
