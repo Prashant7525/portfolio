@@ -1,4 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
+import ScrollProgress from "@/components/layout/ScrollProgress";
+import BackToTop from "@/components/layout/BackToTop";
+
 import Hero from "@/sections/Hero";
 import About from "@/sections/About";
 import Skills from "@/sections/Skills";
@@ -8,14 +11,27 @@ import Footer from "@/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="pt-20">
+    <>
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
+
+      {/* Navigation */}
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+
+      {/* Main Content */}
+      <main className="overflow-x-hidden">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+
+      {/* Footer */}
       <Footer />
-    </main>
+
+      {/* Floating Back To Top */}
+      <BackToTop />
+    </>
   );
 }

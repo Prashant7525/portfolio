@@ -1,98 +1,82 @@
 "use client";
 
-import { Mail, Phone, MapPin } from "lucide-react";
+import Container from "@/components/layout/Container";
+import SectionHeader from "@/components/contact/SectionHeader";
+import ContactCard from "@/components/contact/ContactCard";
+import ContactForm from "@/components/contact/ContactForm";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-slate-900 py-24 text-white"
+      className="
+        relative
+        overflow-hidden
+        bg-[#08101d]
+        py-24
+        text-white
+        sm:py-28
+        lg:py-32
+      "
     >
-      <div className="mx-auto max-w-7xl px-6">
+      {/* Background Glow */}
 
-        <h2 className="mb-4 text-center text-5xl font-bold">
-          Contact Me
-        </h2>
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -left-32
+          top-0
+          h-[420px]
+          w-[420px]
+          rounded-full
+          bg-cyan-500/10
+          blur-[180px]
+        "
+      />
 
-        <p className="mx-auto mb-16 max-w-2xl text-center text-slate-400">
-          Have a project or opportunity? Let&apos;s connect.
-        </p>
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-32
+          bottom-0
+          h-[420px]
+          w-[420px]
+          rounded-full
+          bg-blue-500/10
+          blur-[180px]
+        "
+      />
 
-        <div className="grid gap-12 lg:grid-cols-2">
+      <Container>
 
-          {/* Left */}
-          <div className="space-y-8">
+        {/* Section Header */}
 
-            <div className="flex items-center gap-4">
-              <Mail className="text-cyan-400" />
-              <div>
-                <h3 className="font-semibold">Email</h3>
-                <p className="text-slate-400">
-                  prashantkumar75258@gmail.com
-                </p>
-              </div>
-            </div>
+        <SectionHeader />
 
-            <div className="flex items-center gap-4">
-              <Phone className="text-cyan-400" />
-              <div>
-                <h3 className="font-semibold">Phone</h3>
-                <p className="text-slate-400">
-                  +91 9065949148
-                </p>
-              </div>
-            </div>
+        {/* Contact Content */}
 
-            <div className="flex items-center gap-4">
-              <MapPin className="text-cyan-400" />
-              <div>
-                <h3 className="font-semibold">Location</h3>
-                <p className="text-slate-400">
-                  India
-                </p>
-              </div>
-            </div>
+        <div
+          className="
+            grid
+            w-full
+            items-stretch
+            gap-8
+            lg:grid-cols-[0.9fr_1.1fr]
+            lg:gap-10
+          "
+        >
+          {/* Contact Information */}
 
-          </div>
+          <ContactCard />
 
-          {/* Right */}
-          <form className="space-y-6">
+          {/* Contact Form */}
 
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full rounded-xl border border-slate-700 bg-slate-800 p-4 outline-none focus:border-cyan-400"
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full rounded-xl border border-slate-700 bg-slate-800 p-4 outline-none focus:border-cyan-400"
-            />
-
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full rounded-xl border border-slate-700 bg-slate-800 p-4 outline-none focus:border-cyan-400"
-            />
-
-            <textarea
-              rows={6}
-              placeholder="Your Message"
-              className="w-full rounded-xl border border-slate-700 bg-slate-800 p-4 outline-none focus:border-cyan-400"
-            />
-
-            <button
-              className="rounded-xl bg-cyan-500 px-8 py-4 font-semibold transition hover:bg-cyan-600"
-            >
-              Send Message
-            </button>
-
-          </form>
-
+          <ContactForm />
         </div>
 
-      </div>
+      </Container>
     </section>
   );
 }
